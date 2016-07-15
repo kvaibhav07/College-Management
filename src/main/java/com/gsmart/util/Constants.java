@@ -7,5 +7,7 @@ public class Constants {
 	public static final String INVENTORY = "/inventory";
 	
 	
+	public static final String SETGOAL = "/setgoal";
+	
 	public static final String CONSTRAINT_VIOLATION = "RECORD ALREADY EXISTS";
 }
