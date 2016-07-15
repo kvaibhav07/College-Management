@@ -30,6 +30,7 @@
 			<list>
 				<value>com.gsmart.model.Band</value>
 				<value>com.gsmart.model.Fee</value>
+				<value>com.gsmart.model.Inventory</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
