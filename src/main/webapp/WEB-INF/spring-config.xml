@@ -29,6 +29,7 @@
 		<property name="annotatedClasses">
 			<list>
 				<value>com.gsmart.model.Band</value>
+				<value>com.gsmart.model.SetGoal</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
