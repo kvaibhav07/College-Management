@@ -13,7 +13,7 @@ public class Profile {
 
 	@Id
 	@Column(name = "SMART_ID")
-	private Integer smartId;
+	private String smartId;
 
 	@Column(name = "FIRST_NAME")
 	private String firstName;
@@ -361,11 +361,11 @@ public class Profile {
 		this.updSmartId = updSmartId;
 	}
 
-	public Integer getSmartId() {
+	public String getSmartId() {
 		return smartId;
 	}
 
-	public void setSmartId(Integer smartId) {
+	public void setSmartId(String smartId) {
 		this.smartId = smartId;
 	}
 
