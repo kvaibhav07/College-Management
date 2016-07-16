@@ -34,6 +34,7 @@
 				<value>com.gsmart.model.SetGoal</value>
 				<value>com.gsmart.model.Hierarchy</value>
 				<value>com.gsmart.model.RolePermission</value>
+				<value>com.gsmart.model.Holiday</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
