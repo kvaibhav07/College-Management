@@ -19,7 +19,7 @@ import com.gsmart.util.GSmartBaseException;
 import com.gsmart.util.IAMResponse;
 
 @Controller
-@RequestMapping(Constants.Hierarchy)
+@RequestMapping(Constants.HIERARCHY)
 public class HierarchyController {
 
 	@Autowired

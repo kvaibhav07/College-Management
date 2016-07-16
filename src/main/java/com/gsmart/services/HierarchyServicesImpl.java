@@ -29,7 +29,6 @@ import org.springframework.stereotype.Service;
 import com.gsmart.dao.HierarchyDao;
 import com.gsmart.model.Hierarchy;
 import com.gsmart.util.GSmartServiceException;
-import com.gsmart.util.GSmartServiceException;
 
 
 /**
