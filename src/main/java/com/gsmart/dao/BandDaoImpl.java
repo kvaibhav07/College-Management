@@ -15,6 +15,12 @@ import com.gsmart.model.Band;
 import com.gsmart.util.Constants;
 import com.gsmart.util.GSmartDatabaseException;
 
+/**
+ * provides the implementation for the methods available in {@link BandDao} interface
+ * @author :Nirmal Raj J
+ * @version 1.0
+ * @since 2016-02-23  
+ */
 @Repository
 public class BandDaoImpl implements BandDao {
 
@@ -26,7 +32,11 @@ public class BandDaoImpl implements BandDao {
 	Query query;
 
 	final Logger logger = Logger.getLogger(BandDaoImpl.class);
-
+	
+	/**
+	 * to view the list of records available in {@link Band} table
+	 * @return list of band entities available in Band
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Band> getBandList() throws GSmartDatabaseException {
@@ -46,7 +56,12 @@ public class BandDaoImpl implements BandDao {
 		logger.debug("End :: BandDaoImpl.getBandList()");
 		return bandList;
 	}
-
+	
+	/**
+	 * Adds new band entity to {@link Band} save it in database
+	 * @param band instance of Band
+	 * @return Nothing
+	 */
 	@Override
 	public void addBand(Band band) throws GSmartDatabaseException {
 		logger.debug("Start :: BandDaoImpl.addBand()");
@@ -63,7 +78,12 @@ public class BandDaoImpl implements BandDao {
 		}
 		logger.debug("End :: BandDaoImpl.addBand()");
 	}
-
+	
+	/**
+	 * persists the updated band instance 
+	 * @param band instance of {@link Band}
+	 * @return Nothing
+	 */
 	@Override
 	public void editBand(Band band) throws GSmartDatabaseException {
 
@@ -88,7 +108,11 @@ public class BandDaoImpl implements BandDao {
 		}
 		logger.debug("End :: BandDaoImpl.editBand()");
 	}
-
+	/**
+	 * removes the band entity from the database.
+	 * @param band instanceOf {@link Band}
+	 * @return Nothing
+	 */
 	@Override
 	public void deleteBand(Band band) throws GSmartDatabaseException {
 		try {
@@ -102,7 +126,10 @@ public class BandDaoImpl implements BandDao {
 			session.close();
 		}
 	}
-
+	/**
+	 * create instance for session and
+	 * begins transaction
+	 */
 	public void getConnection() {
 		session = sessionFactory.openSession();
 		transaction = session.beginTransaction();

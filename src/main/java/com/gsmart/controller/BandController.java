@@ -18,6 +18,17 @@ import com.gsmart.util.Constants;
 import com.gsmart.util.GSmartBaseException;
 import com.gsmart.util.IAMResponse;
 
+/**
+* The BandController class implements an application that
+* displays list of band entities, add new band entity,
+* edit available band entity and delete available band entity.
+* these functionalities are provided in {@link BandServices}
+*
+* @author :Nirmal Raj J
+* @version 1.0
+* @since 2016-02-23  
+*/
+
 @Controller
 @RequestMapping(Constants.BAND)
 public class BandController {
@@ -27,6 +38,13 @@ public class BandController {
 
 	final Logger logger = Logger.getLogger(BandController.class);
 
+	/**
+	 * to view {@link Band} details.
+	 * @param no parameters
+	 * @return returns list of band entities present in the Band table 
+	 * @see List
+	 * @throws GSmartBaseException
+	 */
 	@RequestMapping( method = RequestMethod.GET)
 	public ResponseEntity<List<Band>> getBand() throws GSmartBaseException {
 		logger.debug("Start :: BandController.getBand()");
@@ -39,7 +57,13 @@ public class BandController {
 		logger.debug("End :: BandController.getBand()");
 		return new ResponseEntity<List<Band>>(bandList, HttpStatus.OK);
 	}
-
+	/**
+	 * provides the access to persist a new band entity 
+	 * Sets the {@code timeStamp} using {@link CalendarCalculator}
+	 * @param band is instance of {@link Band}
+	 * @return persistence status (success/error) in JSON format
+	 * @see IAMResponse
+	 */
 	@RequestMapping( method = RequestMethod.POST)
 	public ResponseEntity<IAMResponse> addBand(@RequestBody Band band) throws GSmartBaseException {
 		logger.debug("Start :: BandController.addBand()");
@@ -50,7 +74,12 @@ public class BandController {
 		logger.debug("End :: BandController.addBand()");
 		return new ResponseEntity<IAMResponse> (myResponse, HttpStatus.OK);
 	}
-
+	/**
+	 * provide the access to update band entity 
+	 * @param band instance of {@link Band}
+	 * @return persistence status (success/error) in JSON format
+	 * @see IAMResponse
+	 */
 	@RequestMapping(method = RequestMethod.PUT)
 	public  ResponseEntity<IAMResponse> editBand(@RequestBody Band band) throws GSmartBaseException {
 		logger.debug("Start :: BandController.editBand()");
@@ -60,7 +89,12 @@ public class BandController {
 		logger.debug("End :: BandController.editBand()");
 		return new ResponseEntity<IAMResponse> (myResponse, HttpStatus.OK);
 	}
-
+	/**
+	 * provide the access to delete band entity 
+	 * @param band instance of {@link Band}
+	 * @return deletion status (success/error) in JSON format
+	 * @see IAMResponse
+	 */
 	@RequestMapping(method = RequestMethod.DELETE)
 	public  ResponseEntity<IAMResponse> deleteBand(@RequestBody Band band) throws GSmartBaseException {
 		logger.debug("Start :: BandController.deleteBand()");
