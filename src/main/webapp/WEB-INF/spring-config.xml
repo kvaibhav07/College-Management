@@ -12,7 +12,7 @@
 		http://www.springframework.org/schema/context 
 		http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 		
-	<context:component-scan base-package="com.gsmart" />
+	<context:component-scan base-package="com.collegemgmt" />
 
 	<mvc:annotation-driven />
 	<bean id="dataSource"
@@ -28,13 +28,13 @@
 		<property name="dataSource" ref="dataSource" />
 		<property name="annotatedClasses">
 			<list>
-				<value>com.gsmart.model.Band</value>
-				<value>com.gsmart.model.Fee</value>
-				<value>com.gsmart.model.Inventory</value>
-				<value>com.gsmart.model.SetGoal</value>
-				<value>com.gsmart.model.Hierarchy</value>
-				<value>com.gsmart.model.RolePermission</value>
-				<value>com.gsmart.model.Holiday</value>
+				<value>com.collegemgmt.model.Band</value>
+				<value>com.collegemgmt.model.Fee</value>
+				<value>com.collegemgmt.model.Inventory</value>
+				<value>com.collegemgmt.model.SetGoal</value>
+				<value>com.collegemgmt.model.Hierarchy</value>
+				<value>com.collegemgmt.model.RolePermission</value>
+				<value>com.collegemgmt.model.Holiday</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
